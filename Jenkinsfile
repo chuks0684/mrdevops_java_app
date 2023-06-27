@@ -16,6 +16,7 @@ pipeline{
             )
             }
         } 
+       -X switch
         stage('Unit Test maven'){
          steps{
              sh "mvn package"
