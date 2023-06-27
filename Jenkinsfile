@@ -5,9 +5,7 @@ pipeline{
     agent any
 
     stages{
-         
-        stage('Git Checkout'){
-                 
+        stage('Git Checkout'){    
             steps{
             gitCheckout(
                 branch: "main",
@@ -16,9 +14,7 @@ pipeline{
             }
         }
         stage('Unit Test maven'){
-         
-
-            steps{
+        steps{
                script{
                    
                    mvnTest()
