@@ -24,7 +24,7 @@ pipeline{
                     when { expression {  params.action == 'create' } }
             steps{
             gitCheckout(
-                branch: "master",
+                branch: "main",
                     git 'https://github.com/chuks0684/mrdevops_java_app.git'
             )
             }
