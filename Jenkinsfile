@@ -3,9 +3,6 @@
 pipeline{
 
     agent any
-      tools {
-    maven "maven3.8.1"
-      }
 
     stages{
         stage('Git Checkout'){    
@@ -16,11 +13,14 @@ pipeline{
             )
             }
         } 
-       -X switch
-        stage('Unit Test maven'){
-         steps{
-             sh "mvn package"
+    stage('Unit Test maven'){
+
+            steps{
+               script{
+                   
+                   mvnTest()
        }
     }
 }
 }    
+}
