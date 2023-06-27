@@ -1,3 +1,4 @@
+set -X
 @Library('my-shared-library') _
 
 pipeline{
@@ -15,9 +16,7 @@ pipeline{
                 url: "https://github.com/chuks0684/mrdevops_java_app.git"
             )
             }
-        }
-        - X
-        stage('Unit Test maven'){
+        } stage('Unit Test maven'){
            steps{
                script{
                     mvnTest()
