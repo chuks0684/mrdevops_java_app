@@ -1,4 +1,3 @@
-set -X
 @Library('my-shared-library') _
 
 pipeline{
